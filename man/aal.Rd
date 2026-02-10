@@ -3,42 +3,27 @@
 \docType{data}
 \name{aal}
 \alias{aal}
-\alias{aal_3d}
-\title{aal atlas}
+\title{AAL (Automated Anatomical Labeling) Atlas}
 \format{
-An object of class \code{brain_atlas} of length 4.
-
-An object of class \code{ggseg3d_atlas} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 4 rows and 4 columns.
+A \link[ggseg.formats:ggseg_atlas]{ggseg.formats::ggseg_atlas} object (cortical).
 }
 \usage{
-aal
-
-aal_3d
+data(aal)
 }
 \description{
-FreeSurfer annot files for this parcellation
-was obtained from (\href{https://github.com/faskowit/multiAtlasTT}{faskowit/multiAtlasTT})
-From the source repo: "We transformed the Arslan data, which is fs_LR 32k space, to fsaverage 
-space, and then made .annot files in this space. For these data, we created arbitrary parcel 
-names and LUT files. The LUT files here seem to have some weirdness in them regarding 
-hemisphere assignments. Thus, these atlases are provided as a means to slice up the cortex. 
-The names and correspondences of the LUT should be determined independently; not based on 
-the LUT files provided here."
+Brain atlas for the AAL parcellation with 41 regions per hemisphere.
+Contains both 2D polygon geometry for \code{\link[ggseg:ggbrain]{ggseg::geom_brain()}} and
+3D vertex indices for \code{\link[ggseg3d:ggseg3d]{ggseg3d::ggseg3d()}}.
 }
 \examples{
 data(aal)
-data(aal_3d)
+aal
 }
 \references{
-Rolls, E. T., Joliot, M., & Tzourio-Mazoyer, N. (2015). 
-    Implementation of a new parcellation of the orbitofrontal cortex in the automated anatomical labeling atlas. 
-    Neuroimage, 122, 1-5.
-    (\href{https://pubmed.ncbi.nlm.nih.gov/xxxxx/}{PubMed})
-    
-\itemize{
- \item{aal}{ - aal atlas}
- \item{aal_3d}{ - aal 3d mesh atlas}
+Rolls, E. T., Joliot, M., & Tzourio-Mazoyer, N. (2015).
+Implementation of a new parcellation of the orbitofrontal cortex in
+the automated anatomical labeling atlas. Neuroimage, 122, 1-5.
+(\href{https://pubmed.ncbi.nlm.nih.gov/26241684/}{PubMed})
 }
-}
-\concept{ggseg_atlases ggseg3d_atlases}
+\concept{ggseg_atlases}
 \keyword{datasets}
