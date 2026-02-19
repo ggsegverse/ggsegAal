@@ -11,13 +11,14 @@
 # Run with: Rscript data-raw/make_atlas.R
 
 library(dplyr)
-library(ggsegExtra)
+library(ggseg.extra)
 library(ggseg.formats)
 
 Sys.setenv(FREESURFER_HOME = "/Applications/freesurfer/7.4.1")
 Sys.setenv(RGL_USE_NULL = "TRUE")
 options(freesurfer.verbose = FALSE)
-future::plan(future::multisession(workers = 4))
+options(chromote.timeout = 120)
+future::plan(future::sequential)
 progressr::handlers("cli")
 progressr::handlers(global = TRUE)
 
@@ -36,13 +37,13 @@ for (f in annot_files) {
 
 cli::cli_h1("Creating aal cortical atlas")
 
-atlas_raw <- create_cortical_atlas(
+atlas_raw <- create_cortical_from_annotation(
   input_annot = annot_files,
   atlas_name = "aal",
   output_dir = file.path(pkg_dir, "data-raw"),
   tolerance = 1,
   smoothness = 2,
-  skip_existing = FALSE,
+  skip_existing = TRUE,
   cleanup = FALSE
 )
 
@@ -52,21 +53,10 @@ print(unique(atlas_raw$core$region))
 atlas_raw <- atlas_raw |>
   atlas_region_contextual("unknown", "label")
 
-atlas_raw <- atlas_raw |>
-  atlas_view_gather()
-
 aal <- atlas_raw
 
 cli::cli_alert_success("Atlas created with {nrow(aal$core)} regions")
 print(aal)
 
-brain_pals <- stats::setNames(
-  list(aal$palette),
-  aal$atlas
-)
-save(brain_pals, file = file.path(pkg_dir, "R", "sysdata.rda"), compress = "xz")
-
 save(aal, file = file.path(pkg_dir, "data", "aal.rda"), compress = "xz")
 cli::cli_alert_success("Saved to data/aal.rda")
-
-file.remove(file.path(pkg_dir, "data", "aal_3d.rda"))

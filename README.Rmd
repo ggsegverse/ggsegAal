@@ -18,13 +18,13 @@ knitr::opts_chunk$set(
 # ggsegAal <img src='man/figures/logo.png' align="right" height="138.5" />
 
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/ggseg/ggsegAal/workflows/R-CMD-check/badge.svg)](https://github.com/ggseg/ggsegAal/actions)
+[![R-CMD-check](https://github.com/ggsegverse/ggsegAal/workflows/R-CMD-check/badge.svg)](https://github.com/ggsegverse/ggsegAal/actions)
 [![DOI](https://zenodo.org/badge/417464916.svg)](https://zenodo.org/badge/latestdoi/417464916)
 <!-- badges: end -->
 
 This package contains the AAL (Automated Anatomical Labeling) atlas for
-the [ggseg](https://ggseg.github.io/ggseg/) and
-[ggseg3d](https://ggseg.github.io/ggseg3d/) plotting packages. The
+the [ggseg](https://ggsegverse.github.io/ggseg/) and
+[ggseg3d](https://ggsegverse.github.io/ggseg3d/) plotting packages. The
 template files were obtained from
 [faskowit/multiAtlasTT](https://github.com/faskowit/multiAtlasTT).
 
@@ -38,7 +38,7 @@ You can install ggsegAal from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("remotes")
-remotes::install_github("ggseg/ggsegAal")
+remotes::install_github("ggsegverse/ggsegAal")
 ```
 
 ## Example

@@ -1,4 +1,4 @@
 library(testthat)
-library(ggsegAal)
+library(ggsegAAL)
 
-test_check("ggsegAal")
+test_check("ggsegAAL")

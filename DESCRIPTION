@@ -1,13 +1,20 @@
-Package: ggsegAal
-Title: AAL Atlas for the 'ggseg' Ecosystem
+Package: ggsegAAL
+Title: AAL Atlases for the 'ggseg' Ecosystem
 Version: 2.0.0
-Authors@R: c(person("Athanasia Mo", "Mowinckel",
-                    email = "a.m.mowinckel@psykologi.uio.no",
-                    role = c("aut", "cre"),
-                    comment = c(ORCID = "0000-0002-5756-0223")))
-Description: AAL (Automated Anatomical Labeling) atlas for the 'ggseg'
-    ecosystem. Provides a unified 'ggseg_atlas' object with both 2D polygon
-    geometry and 3D vertex indices, for use with 'ggseg' and 'ggseg3d'.
+Authors@R: c(
+    person("Athanasia Mo", "Mowinckel",
+           email = "a.m.mowinckel@psykologi.uio.no",
+           role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-5756-0223")),
+    person("Herve", "Lemaitre",
+           email = "herve.lemaitre@u-bordeaux.fr",
+           role = "ctb",
+           comment = c(ORCID = "0000-0002-5952-076X")))
+Description: AAL (Automated Anatomical Labeling) atlases for the 'ggseg'
+    ecosystem. Provides unified 'ggseg_atlas' objects for AAL2 (cortical,
+    Rolls et al. 2015) and AAL3 (cortical, subcortical, cerebellum,
+    Rolls et al. 2020), with both 2D polygon geometry and 3D vertex/mesh
+    data for use with 'ggseg' and 'ggseg3d'.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -24,11 +31,12 @@ Suggests:
     testthat (>= 3.0.0),
     vdiffr
 Remotes:
-    ggseg/ggseg,
-    ggseg/ggseg3d,
-    ggseg/ggseg.formats
-URL: https://github.com/ggseg/ggsegAal
-BugReports: https://github.com/ggseg/ggsegAal/issues
+    ggsegverse/ggseg,
+    ggsegverse/ggseg3d,
+    ggsegverse/ggseg.formats
+URL: https://github.com/ggsegverse/ggsegAal
+BugReports: https://github.com/ggsegverse/ggsegAal/issues
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
 Config/testthat/edition: 3
+Config/Needs/website: ggsegverse/ggseg.docs
