@@ -12,6 +12,7 @@
 #'     \doi{10.1006/nimg.2001.0978}
 #'
 #' @return A [ggseg.formats::ggseg_atlas] object (cortical).
+#' @import ggseg.formats
 #' @export
 #' @examples
 #' aal()

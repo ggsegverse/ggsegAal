@@ -18,7 +18,8 @@ Description: AAL (Automated Anatomical Labeling) atlases for the 'ggseg'
 License: MIT + file LICENSE
 Encoding: UTF-8
 Depends:
-    R (>= 3.5),
+    R (>= 3.5)
+Imports:
     ggseg.formats
 Suggests:
     ggseg,
