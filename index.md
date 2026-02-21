@@ -1,0 +1,66 @@
+# ggsegAal
+
+This package contains dataset for plotting the
+[aal](https://www.sciencedirect.com/science/article/abs/pii/S1053811915006953?via%3Dihub)
+atlas ggseg and ggseg3d. The template files were obtained from
+[faskowit/multiAtlasTT](https://github.com/faskowit/multiAtlasTT).
+
+Rolls, E. T., Joliot, M., & Tzourio-Mazoyer, N. (2015). Implementation
+of a new parcellation of the orbitofrontal cortex in the automated
+anatomical labeling atlas. Neuroimage, 122, 1-5.
+
+To learn how to use these atlases, please look at the documentation for
+[ggseg](https://ggsegverse.github.io/ggseg/) and
+[ggseg3d](https://ggsegverse.github.io/ggseg3d)
+
+## Installation
+
+We recommend installing the ggseg-atlases through the ggseg
+[r-universe](https://ggsegverse.r-universe.dev/ui#builds):
+
+``` r
+# Enable this universe
+options(repos = c(
+    ggsegverse = 'https://ggsegverse.r-universe.dev',
+    CRAN = 'https://cloud.r-project.org'))
+
+# Install some packages
+install.packages('ggsegAal')
+```
+
+You can install the released version of ggsegAal from
+[GitHub](https://github.com/) with:
+
+``` r
+# install.packages("remotes")
+remotes::install_github("ggsegverse/ggsegAal")
+```
+
+``` r
+library(ggseg)
+#> Warning: package 'ggseg' was built under R version 4.1.1
+#> Loading required package: ggplot2
+library(ggseg3d)
+library(ggsegAal)
+
+plot(aal) +
+  theme(legend.position = "bottom", 
+        legend.text = element_text(size = 9)) +
+  guides(fill = guide_legend(ncol = 6))
+```
+
+![](reference/figures/README-unnamed-chunk-3-1.png)
+
+``` r
+library(dplyr)
+ggseg3d(atlas = aal_3d) %>% 
+  add_glassbrain() %>% 
+  pan_camera("right lateral")
+```
+
+![](reference/figures/README-3d-plot.png)
+
+Please note that the ‘ggsegAal’ project is released with a [Contributor
+Code of
+Conduct](https://ggsegverse.github.io/ggsegAal/CODE_OF_CONDUCT.md). By
+contributing to this project, you agree to abide by its terms.
