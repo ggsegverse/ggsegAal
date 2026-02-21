@@ -1,5 +1,4 @@
 library(testthat)
+library(ggsegAAL)
 
-test_check("ggsegAal")
-
-# covr::zero_coverage(covr::package_coverage("."))
+test_check("ggsegAAL")
