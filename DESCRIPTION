@@ -17,8 +17,6 @@ Description: AAL (Automated Anatomical Labeling) atlases for the 'ggseg'
     data for use with 'ggseg' and 'ggseg3d'.
 License: MIT + file LICENSE
 Encoding: UTF-8
-LazyData: true
-LazyDataCompression: xz
 Depends:
     R (>= 3.5),
     ggseg.formats

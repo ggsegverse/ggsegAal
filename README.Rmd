@@ -50,19 +50,19 @@ library(ggplot2)
 
 ggplot() +
   geom_brain(
-    atlas = aal,
+    atlas = aal(),
     mapping = aes(fill = label),
     position = position_brain(hemi ~ view),
     show.legend = FALSE
   ) +
-  scale_fill_manual(values = aal$palette, na.value = "grey") +
+  scale_fill_manual(values = aal()$palette, na.value = "grey") +
   theme_void()
 ```
 
 ```{r "3d-noneval", eval=FALSE}
 library(ggseg3d)
 
-ggseg3d(atlas = aal) |>
+ggseg3d(atlas = aal()) |>
   pan_camera("right lateral")
 ```
 
