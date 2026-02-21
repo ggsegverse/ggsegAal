@@ -28,10 +28,6 @@ Suggests:
     rmarkdown,
     testthat (>= 3.0.0),
     vdiffr
-Remotes:
-    ggsegverse/ggseg,
-    ggsegverse/ggseg3d,
-    ggsegverse/ggseg.formats
 URL: https://github.com/ggsegverse/ggsegAal
 BugReports: https://github.com/ggsegverse/ggsegAal/issues
 Roxygen: list(markdown = TRUE)
