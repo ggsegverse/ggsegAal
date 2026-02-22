@@ -1,10 +1,12 @@
 ---
-output: github_document
+format: gfm
 ---
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
+<!-- README.md is generated from README.qmd. Please edit that file -->
 
-```{r, include = FALSE}
+```{r}
+#| label: setup
+#| include: false
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
@@ -18,13 +20,13 @@ knitr::opts_chunk$set(
 # ggsegAal <img src='man/figures/logo.png' align="right" height="138.5" />
 
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/ggsegverse/ggsegAal/workflows/R-CMD-check/badge.svg)](https://github.com/ggsegverse/ggsegAal/actions)
+[![R-CMD-check](https://github.com/ggseg/ggsegAal/workflows/R-CMD-check/badge.svg)](https://github.com/ggseg/ggsegAal/actions)
 [![DOI](https://zenodo.org/badge/417464916.svg)](https://zenodo.org/badge/latestdoi/417464916)
 <!-- badges: end -->
 
 This package contains the AAL (Automated Anatomical Labeling) atlas for
-the [ggseg](https://ggsegverse.github.io/ggseg/) and
-[ggseg3d](https://ggsegverse.github.io/ggseg3d/) plotting packages. The
+the [ggseg](https://ggseg.github.io/ggseg/) and
+[ggseg3d](https://ggseg.github.io/ggseg3d/) plotting packages. The
 template files were obtained from
 [faskowit/multiAtlasTT](https://github.com/faskowit/multiAtlasTT).
 
@@ -34,16 +36,30 @@ anatomical labeling atlas. Neuroimage, 122, 1-5.
 
 ## Installation
 
+We recommend installing the ggseg-atlases through the ggseg [r-universe](https://ggseg.r-universe.dev/ui#builds):
+
+```{r}
+#| label: install-r-universe
+#| eval: false
+options(repos = c(
+  ggseg = "https://ggseg.r-universe.dev",
+  CRAN = "https://cloud.r-project.org"
+))
+
+install.packages("ggsegAal")
+```
+
 You can install ggsegAal from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("remotes")
-remotes::install_github("ggsegverse/ggsegAal")
+remotes::install_github("ggseg/ggsegAal")
 ```
 
 ## Example
 
 ```{r}
+#| label: 2d-plot
 library(ggsegAal)
 library(ggseg)
 library(ggplot2)
@@ -59,14 +75,30 @@ ggplot() +
   theme_void()
 ```
 
-```{r "3d-noneval", eval=FALSE}
+```{r}
+#| label: 3d-example
+#| eval: false
 library(ggseg3d)
 
 ggseg3d(atlas = aal()) |>
   pan_camera("right lateral")
 ```
 
-```{r "3d-plot", echo=FALSE}
+```{r}
+#| label: 3d-snapshot
+#| include: false
+#| eval: !expr (file.exists(Sys.which("chrome")) || file.exists(Sys.which("chromium"))) && !nzchar(Sys.getenv("CI"))
+library(ggseg3d)
+
+ggseg3d(atlas = aal()) |>
+  pan_camera("right lateral") |>
+  snapshot_brain("man/figures/README-3d-plot.png")
+```
+
+```{r}
+#| label: 3d-include
+#| echo: false
+#| eval: !expr file.exists("man/figures/README-3d-plot.png")
 knitr::include_graphics("man/figures/README-3d-plot.png")
 ```
 
