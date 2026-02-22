@@ -9,3 +9,4 @@
 pkgdown
 docs
 ^\.claude$
+^README\.qmd$
