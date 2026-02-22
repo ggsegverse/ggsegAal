@@ -60,7 +60,7 @@ remotes::install_github("ggseg/ggsegAal")
 
 ```{r}
 #| label: 2d-plot
-library(ggsegAal)
+library(ggsegAAL)
 library(ggseg)
 library(ggplot2)
 
