@@ -1,75 +1,52 @@
+# ggsegAal
 
-
-<!-- README.md is generated from README.qmd. Please edit that file -->
-
-# ggsegAal <img src='man/figures/logo.png' align="right" height="138.5" />
-
-<!-- badges: start -->
-
-[![R-CMD-check](https://github.com/ggseg/ggsegAal/workflows/R-CMD-check/badge.svg)](https://github.com/ggseg/ggsegAal/actions)
-[![DOI](https://zenodo.org/badge/417464916.svg)](https://zenodo.org/badge/latestdoi/417464916)
-<!-- badges: end -->
-
-This package contains the AAL (Automated Anatomical Labeling) atlas for
-the [ggseg](https://ggseg.github.io/ggseg/) and
-[ggseg3d](https://ggseg.github.io/ggseg3d/) plotting packages. The
-template files were obtained from
-[faskowit/multiAtlasTT](https://github.com/faskowit/multiAtlasTT).
-
-Rolls, E. T., Joliot, M., & Tzourio-Mazoyer, N. (2015). Implementation
-of a new parcellation of the orbitofrontal cortex in the automated
-anatomical labeling atlas. Neuroimage, 122, 1-5.
+AAL Atlases for the ggsegverse Ecosystem.
 
 ## Installation
 
-We recommend installing the ggseg-atlases through the ggseg
-[r-universe](https://ggseg.r-universe.dev/ui#builds):
-
-``` r
-options(repos = c(
-  ggseg = "https://ggseg.r-universe.dev",
-  CRAN = "https://cloud.r-project.org"
-))
-
-install.packages("ggsegAal")
-```
-
-You can install ggsegAal from [GitHub](https://github.com/) with:
-
 ``` r
 # install.packages("remotes")
-remotes::install_github("ggseg/ggsegAal")
+remotes::install_github("ggsegverse/ggsegAal")
 ```
 
-## Example
+## Usage
 
 ``` r
-library(ggsegAAL)
+library(ggsegAal)
 library(ggseg)
-library(ggplot2)
 
-ggplot() +
-  geom_brain(
-    atlas = aal(),
-    mapping = aes(fill = label),
-    position = position_brain(hemi ~ view),
-    show.legend = FALSE
-  ) +
-  scale_fill_manual(values = aal()$palette, na.value = "grey") +
-  theme_void()
+plot(aal()) +
+  theme_brain()
 ```
 
-<img src="man/figures/README-2d-plot-1.png" style="width:100.0%" />
+## Atlases
 
-``` r
-library(ggseg3d)
+### aal
 
-ggseg3d(atlas = aal()) |>
-  pan_camera("right lateral")
-```
+Automated Anatomical Labeling parcellation (Tzourio-Mazoyer et al., 2002).
 
-<img src="man/figures/README-3d-plot.png" style="width:100.0%" />
+![aal](man/figures/aal_snapshot.png)
 
-Please note that the ‘ggsegAal’ project is released with a [Contributor
-Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this project,
-you agree to abide by its terms.
+### aal2
+
+AAL2 parcellation (Rolls et al., 2015) with updated orbitofrontal cortex.
+
+![aal2](man/figures/aal2_snapshot.png)
+
+### aal3\_cortical
+
+AAL3 cortical parcellation (Rolls et al., 2020).
+
+![aal3\_cortical](man/figures/aal3_cortical_snapshot.png)
+
+### aal3\_subcortical
+
+AAL3 subcortical parcellation covering basal ganglia and thalamic nuclei.
+
+![aal3\_subcortical](man/figures/aal3_subcortical_snapshot.png)
+
+### aal3\_cerebellum
+
+AAL3 cerebellar parcellation.
+
+![aal3\_cerebellum](man/figures/aal3_cerebellum_snapshot.png)

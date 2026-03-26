@@ -1,5 +1,5 @@
 Package: ggsegAAL
-Title: AAL Atlases for the 'ggseg' Ecosystem
+Title: AAL Atlases for the 'ggsegverse' Ecosystem
 Version: 2.0.1
 Authors@R: c(
     person("Athanasia Mo", "Mowinckel",
