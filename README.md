@@ -1,10 +1,19 @@
 # ggsegAal
 
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/ggsegverse/ggsegAal/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ggsegverse/ggsegAal/actions/workflows/R-CMD-check.yaml)
+[![r-universe](https://ggsegverse.r-universe.dev/badges/ggsegAal)](https://ggsegverse.r-universe.dev/ggsegAal)
+<!-- badges: end -->
+
 AAL Atlases for the ggsegverse Ecosystem.
 
 ## Installation
 
 ``` r
+# From r-universe
+install.packages("ggsegAal", repos = "https://ggsegverse.r-universe.dev")
+
+# From GitHub
 # install.packages("remotes")
 remotes::install_github("ggsegverse/ggsegAal")
 ```
