@@ -59,3 +59,13 @@ AAL3 subcortical parcellation covering basal ganglia and thalamic nuclei.
 AAL3 cerebellar parcellation.
 
 ![aal3\_cerebellum](man/figures/aal3_cerebellum_snapshot.png)
+
+## Data sources
+
+| Atlas | Source | Reference | Date obtained |
+|-------|--------|-----------|---------------|
+| aal | FreeSurfer fsaverage5 annotation | Tzourio-Mazoyer et al. (2002) [doi:10.1006/nimg.2001.0978](https://doi.org/10.1006/nimg.2001.0978) | 2021-10-15 |
+| aal2 | FreeSurfer fsaverage5 annotation | Rolls et al. (2015) [PubMed:26241684](https://pubmed.ncbi.nlm.nih.gov/26241684/) | 2021-10-15 |
+| aal3\_cortical | FreeSurfer fsaverage5 annotation | Rolls et al. (2020) [doi:10.1016/j.neuroimage.2020.116189](https://doi.org/10.1016/j.neuroimage.2020.116189) | 2021-10-15 |
+| aal3\_subcortical | AAL3 volumetric atlas | Rolls et al. (2020) [doi:10.1016/j.neuroimage.2020.116189](https://doi.org/10.1016/j.neuroimage.2020.116189) | 2021-10-15 |
+| aal3\_cerebellum | AAL3 volumetric atlas | Rolls et al. (2020) [doi:10.1016/j.neuroimage.2020.116189](https://doi.org/10.1016/j.neuroimage.2020.116189) | 2021-10-15 |
