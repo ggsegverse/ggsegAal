@@ -16,6 +16,7 @@
 #' @export
 #' @examples
 #' aal()
+#' plot(aal())
 aal <- function() .aal
 
 #' AAL2 Cortical Atlas
@@ -38,6 +39,7 @@ aal <- function() .aal
 #' @export
 #' @examples
 #' aal2()
+#' plot(aal2())
 aal2 <- function() .aal2
 #' AAL3 Cortical Atlas
 #'
@@ -54,6 +56,7 @@ aal2 <- function() .aal2
 #' @export
 #' @examples
 #' aal3_cortical()
+#' plot(aal3_cortical())
 aal3_cortical <- function() .aal3_cortical
 #' AAL3 Subcortical (Basal Ganglia) Atlas
 #'
@@ -71,6 +74,7 @@ aal3_cortical <- function() .aal3_cortical
 #' @export
 #' @examples
 #' aal3_subcortical()
+#' plot(aal3_subcortical())
 aal3_subcortical <- function() .aal3_subcortical
 #' AAL3 Cerebellum Atlas
 #'
@@ -88,4 +92,5 @@ aal3_subcortical <- function() .aal3_subcortical
 #' @export
 #' @examples
 #' aal3_cerebellum()
+#' plot(aal3_cerebellum())
 aal3_cerebellum <- function() .aal3_cerebellum
