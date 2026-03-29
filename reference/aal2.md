@@ -4,7 +4,7 @@ Brain atlas for the AAL2 parcellation (Rolls et al. 2015) with 41
 cortical regions per hemisphere. Contains both 2D polygon geometry for
 [`ggseg::geom_brain()`](https://ggsegverse.github.io/ggseg/reference/ggbrain.html)
 and 3D vertex indices for
-[`ggseg3d::ggseg3d()`](https://lcbc-uio.github.io/ggseg3d//reference/ggseg3d.html).
+[`ggseg3d::ggseg3d()`](https://ggsegverse.github.io/ggseg3d/reference/ggseg3d.html).
 
 ## Usage
 

@@ -1,66 +1,74 @@
 # ggsegAal
 
-This package contains the AAL (Automated Anatomical Labeling) atlas for
-the [ggseg](https://ggseg.github.io/ggseg/) and
-[ggseg3d](https://ggseg.github.io/ggseg3d/) plotting packages. The
-template files were obtained from
-[faskowit/multiAtlasTT](https://github.com/faskowit/multiAtlasTT).
-
-Rolls, E. T., Joliot, M., & Tzourio-Mazoyer, N. (2015). Implementation
-of a new parcellation of the orbitofrontal cortex in the automated
-anatomical labeling atlas. Neuroimage, 122, 1-5.
+AAL Atlases for the ggsegverse Ecosystem.
 
 ## Installation
 
-We recommend installing the ggseg-atlases through the ggseg
-[r-universe](https://ggseg.r-universe.dev/ui#builds):
-
 ``` r
-options(repos = c(
-  ggseg = "https://ggseg.r-universe.dev",
-  CRAN = "https://cloud.r-project.org"
-))
+# From r-universe
+install.packages("ggsegAAL", repos = "https://ggsegverse.r-universe.dev")
 
-install.packages("ggsegAal")
-```
-
-You can install ggsegAal from [GitHub](https://github.com/) with:
-
-``` r
+# From GitHub
 # install.packages("remotes")
-remotes::install_github("ggseg/ggsegAal")
+remotes::install_github("ggsegverse/ggsegAal")
 ```
 
-## Example
+## Atlases
+
+### aal
+
+Automated Anatomical Labeling parcellation (Tzourio-Mazoyer et al.,
+2002).
 
 ``` r
 library(ggsegAAL)
-library(ggseg)
-library(ggplot2)
-
-ggplot() +
-  geom_brain(
-    atlas = aal(),
-    mapping = aes(fill = label),
-    position = position_brain(hemi ~ view),
-    show.legend = FALSE
-  ) +
-  scale_fill_manual(values = aal()$palette, na.value = "grey") +
-  theme_void()
+plot(aal())
 ```
 
-![](reference/figures/README-2d-plot-1.png)
+![](reference/figures/README-aal-1.png)
+
+### aal2
+
+AAL2 parcellation (Rolls et al., 2015).
 
 ``` r
-library(ggseg3d)
-
-ggseg3d(atlas = aal()) |>
-  pan_camera("right lateral")
+plot(aal2())
 ```
 
-![](reference/figures/README-3d-plot.png)
+![](reference/figures/README-aal2-1.png)
 
-Please note that the ‘ggsegAal’ project is released with a [Contributor
-Code of
-Conduct](https://ggsegverse.github.io/ggsegAal/CODE_OF_CONDUCT.md). By
-contributing to this project, you agree to abide by its terms.
+### aal3_cortical
+
+AAL3 cortical parcellation (Rolls et al., 2020).
+
+``` r
+plot(aal3_cortical())
+```
+
+![](reference/figures/README-aal3_cortical-1.png)
+
+### aal3_subcortical
+
+AAL3 subcortical parcellation.
+
+``` r
+plot(aal3_subcortical())
+```
+
+![](reference/figures/README-aal3_subcortical-1.png)
+
+### aal3_cerebellum
+
+AAL3 cerebellar parcellation.
+
+``` r
+plot(aal3_cerebellum())
+```
+
+![](reference/figures/README-aal3_cerebellum-1.png) \## Data source
+
+FreeSurfer fsaverage5 annotations.
+
+- **Reference**: Tzourio-Mazoyer et al. (2002)
+  [doi:10.1006/nimg.2001.0978](https://doi.org/10.1006/nimg.2001.0978)
+- **Date obtained**: 2021-10-15
