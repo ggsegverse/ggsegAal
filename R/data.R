@@ -4,6 +4,7 @@
 #' (Tzourio-Mazoyer et al. 2002).
 #'
 #' @family ggseg_atlases
+#' @family cortical_atlases
 #'
 #' @references Tzourio-Mazoyer N, Landeau B, Papathanassiou D, et al. (2002).
 #'     Automated Anatomical Labeling of Activations in SPM Using a Macroscopic
@@ -29,6 +30,7 @@ aal <- function() .aal
 #' original generic annotation labels to anatomical AAL2 names.
 #'
 #' @family ggseg_atlases
+#' @family cortical_atlases
 #'
 #' @references Rolls, E. T., Joliot, M., & Tzourio-Mazoyer, N. (2015).
 #'     Implementation of a new parcellation of the orbitofrontal cortex in
@@ -47,6 +49,7 @@ aal2 <- function() .aal2
 #' hemisphere. Contains 2D polygon geometry for [ggseg::geom_brain()].
 #'
 #' @family ggseg_atlases
+#' @family cortical_atlases
 #'
 #' @references Rolls, E. T., Huang, C. C., Lin, C. P., Feng, J., & Joliot, M.
 #'     (2020). Automated anatomical labelling atlas 3. Neuroimage, 206, 116189.
@@ -65,6 +68,7 @@ aal3_cortical <- function() .aal3_cortical
 #' geometry for [ggseg::geom_brain()] and 3D meshes for [ggseg3d::ggseg3d()].
 #'
 #' @family ggseg_atlases
+#' @family subcortical_atlases
 #'
 #' @references Rolls, E. T., Huang, C. C., Lin, C. P., Feng, J., & Joliot, M.
 #'     (2020). Automated anatomical labelling atlas 3. Neuroimage, 206, 116189.
@@ -83,6 +87,7 @@ aal3_subcortical <- function() .aal3_subcortical
 #' geometry for [ggseg::geom_brain()] and 3D meshes for [ggseg3d::ggseg3d()].
 #'
 #' @family ggseg_atlases
+#' @family cerebellar_atlases
 #'
 #' @references Rolls, E. T., Huang, C. C., Lin, C. P., Feng, J., & Joliot, M.
 #'     (2020). Automated anatomical labelling atlas 3. Neuroimage, 206, 116189.
