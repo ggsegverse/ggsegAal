@@ -10,3 +10,4 @@ pkgdown
 docs
 ^\.claude$
 ^README\.qmd$
+^codemeta\.json$
