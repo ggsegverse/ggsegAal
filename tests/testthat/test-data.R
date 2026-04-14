@@ -45,6 +45,7 @@ describe("aal2 atlas", {
 
   it("renders with ggseg3d", {
     skip_if_not_installed("ggseg3d")
+    skip_if_not_installed("ggseg.meshes")
     p <- ggseg3d::ggseg3d(atlas = aal2())
     expect_s3_class(p, c("plotly", "htmlwidget"))
   })
@@ -125,6 +126,7 @@ describe("aal3_subcortical atlas", {
 
   it("renders with ggseg3d", {
     skip_if_not_installed("ggseg3d")
+    skip_if_not_installed("ggseg.meshes")
     p <- ggseg3d::ggseg3d(atlas = aal3_subcortical())
     expect_s3_class(p, c("plotly", "htmlwidget"))
   })
@@ -166,6 +168,7 @@ describe("aal3_cerebellum atlas", {
 
   it("renders with ggseg3d", {
     skip_if_not_installed("ggseg3d")
+    skip_if_not_installed("ggseg.meshes")
     p <- ggseg3d::ggseg3d(atlas = aal3_cerebellum())
     expect_s3_class(p, c("plotly", "htmlwidget"))
   })
