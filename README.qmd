@@ -20,23 +20,21 @@ knitr::opts_chunk$set(
 # ggsegAal <img src='man/figures/logo.png' align="right" height="138.5" />
 
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/ggseg/ggsegAal/workflows/R-CMD-check/badge.svg)](https://github.com/ggseg/ggsegAal/actions)
-[![DOI](https://zenodo.org/badge/417464916.svg)](https://zenodo.org/badge/latestdoi/417464916)
+[![R-CMD-check](https://github.com/ggsegverse/ggsegAal/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ggsegverse/ggsegAal/actions/workflows/R-CMD-check.yaml)
+[![r-universe](https://ggseg.r-universe.dev/badges/ggsegAAL)](https://ggseg.r-universe.dev/ggsegAAL)
 <!-- badges: end -->
 
 This package contains the AAL (Automated Anatomical Labeling) atlas for
-the [ggseg](https://ggseg.github.io/ggseg/) and
-[ggseg3d](https://ggseg.github.io/ggseg3d/) plotting packages. The
-template files were obtained from
-[faskowit/multiAtlasTT](https://github.com/faskowit/multiAtlasTT).
+the [ggseg](https://ggseg.github.io/ggseg/) plotting packages.
 
-Rolls, E. T., Joliot, M., & Tzourio-Mazoyer, N. (2015). Implementation
-of a new parcellation of the orbitofrontal cortex in the automated
-anatomical labeling atlas. Neuroimage, 122, 1-5.
+Rolls ET, Joliot M, & Tzourio-Mazoyer N (2015). Implementation of a new
+parcellation of the orbitofrontal cortex in the automated anatomical labeling
+atlas. *Neuroimage*, 122, 1-5.
 
 ## Installation
 
-We recommend installing the ggseg-atlases through the ggseg [r-universe](https://ggseg.r-universe.dev/ui#builds):
+We recommend installing the ggseg-atlases through the ggseg
+[r-universe](https://ggseg.r-universe.dev/ui#builds):
 
 ```{r}
 #| label: install-r-universe
@@ -46,22 +44,22 @@ options(repos = c(
   CRAN = "https://cloud.r-project.org"
 ))
 
-install.packages("ggsegAal")
+install.packages("ggsegAAL")
 ```
 
-You can install ggsegAal from [GitHub](https://github.com/) with:
+You can install this package from [GitHub](https://github.com/) with:
 
-``` r
-# install.packages("remotes")
-remotes::install_github("ggseg/ggsegAal")
+```r
+# install.packages("pak")
+pak::pak("ggsegverse/ggsegAal")
 ```
 
-## Example
+## AAL atlas
 
 ```{r}
-#| label: 2d-plot
-library(ggsegAAL)
+#| label: aal
 library(ggseg)
+library(ggsegAAL)
 library(ggplot2)
 
 ggplot() +
@@ -75,33 +73,67 @@ ggplot() +
   theme_void()
 ```
 
-```{r}
-#| label: 3d-example
-#| eval: false
-library(ggseg3d)
-
-ggseg3d(atlas = aal()) |>
-  pan_camera("right lateral")
-```
+## AAL2 atlas
 
 ```{r}
-#| label: 3d-snapshot
-#| include: false
-#| eval: !expr (file.exists(Sys.which("chrome")) || file.exists(Sys.which("chromium"))) && !nzchar(Sys.getenv("CI"))
-library(ggseg3d)
-
-ggseg3d(atlas = aal()) |>
-  pan_camera("right lateral") |>
-  snapshot_brain("man/figures/README-3d-plot.png")
+#| label: aal2
+ggplot() +
+  geom_brain(
+    atlas = aal2(),
+    mapping = aes(fill = label),
+    position = position_brain(hemi ~ view),
+    show.legend = FALSE
+  ) +
+  scale_fill_manual(values = aal2()$palette, na.value = "grey") +
+  theme_void()
 ```
+
+## AAL3 cortical atlas
 
 ```{r}
-#| label: 3d-include
-#| echo: false
-#| eval: !expr file.exists("man/figures/README-3d-plot.png")
-knitr::include_graphics("man/figures/README-3d-plot.png")
+#| label: aal3-cortical
+ggplot() +
+  geom_brain(
+    atlas = aal3_cortical(),
+    mapping = aes(fill = label),
+    position = position_brain(hemi ~ view),
+    show.legend = FALSE
+  ) +
+  scale_fill_manual(values = aal3_cortical()$palette, na.value = "grey") +
+  theme_void()
 ```
 
-Please note that the 'ggsegAal' project is released with a
-[Contributor Code of Conduct](CODE_OF_CONDUCT.md).
-By contributing to this project, you agree to abide by its terms.
+## AAL3 subcortical atlas
+
+```{r}
+#| label: aal3-subcortical
+ggplot() +
+  geom_brain(
+    atlas = aal3_subcortical(),
+    mapping = aes(fill = label),
+    position = position_brain(. ~ view),
+    show.legend = FALSE
+  ) +
+  scale_fill_manual(values = aal3_subcortical()$palette, na.value = "grey") +
+  theme_void()
+```
+
+## AAL3 cerebellum atlas
+
+```{r}
+#| label: aal3-cerebellum
+ggplot() +
+  geom_brain(
+    atlas = aal3_cerebellum(),
+    mapping = aes(fill = label),
+    position = position_brain(. ~ view),
+    show.legend = FALSE
+  ) +
+  scale_fill_manual(values = aal3_cerebellum()$palette, na.value = "grey") +
+  theme_void()
+```
+
+## Data source
+
+Rolls ET, Huang CC, Lin CP, Feng J, & Joliot M (2020). Automated anatomical
+labelling atlas 3. *Neuroimage*, 206, 116189.
