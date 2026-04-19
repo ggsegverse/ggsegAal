@@ -20,6 +20,7 @@ original generic annotation labels to anatomical AAL2 names.
 }
 \examples{
 aal2()
+\dontrun{plot(aal2())}
 }
 \references{
 Rolls, E. T., Joliot, M., & Tzourio-Mazoyer, N. (2015).
@@ -33,5 +34,10 @@ Other ggseg_atlases:
 \code{\link{aal3_cerebellum}()},
 \code{\link{aal3_cortical}()},
 \code{\link{aal3_subcortical}()}
+
+Other cortical_atlases: 
+\code{\link{aal}()},
+\code{\link{aal3_cortical}()}
 }
+\concept{cortical_atlases}
 \concept{ggseg_atlases}

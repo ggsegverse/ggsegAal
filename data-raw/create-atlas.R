@@ -1,5 +1,4 @@
 library(ggsegExtra)
-# devtools::load_all("../ggsegExtra/")
 library(dplyr) # for cleaning the atlas data efficiently
 library(tidyr) # for cleaning the atlas data efficiently
 
@@ -54,7 +53,7 @@ aal <- make_ggseg3d_2_ggseg(aal_3d,
 
 plot(aal)
 
-aal %>%
+aal |>
   ggseg(atlas = ., show.legend = TRUE,
         colour = "black",
         mapping = aes(fill=region)) +

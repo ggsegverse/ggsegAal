@@ -73,7 +73,9 @@ aal$core$label <- remap(aal$core$label, old_to_new_label)
 aal$data$sf$label <- remap(aal$data$sf$label, old_to_new_label)
 
 if (!is.null(aal$data$vertices)) {
-  aal$data$vertices$label <- unname(remap(aal$data$vertices$label, old_to_new_label))
+   aal$data$vertices$label <- unname(
+     remap(aal$data$vertices$label, old_to_new_label)
+   )
 }
 
 names(aal$palette) <- remap(names(aal$palette), old_to_new_label)

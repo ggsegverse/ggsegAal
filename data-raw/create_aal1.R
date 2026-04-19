@@ -69,16 +69,3 @@ cli::cli_alert_info("See comments in this script for guidance.")
 ##
 ## Once you have lh.aal1.annot and rh.aal1.annot on fsaverage5:
 ##
-## library(ggsegExtra)
-## aal1 <- create_cortical_atlas(
-##   input_annot = c("data-raw/aal1/lh.aal1.annot",
-##                   "data-raw/aal1/rh.aal1.annot"),
-##   atlas_name = "aal1",
-##   output_dir = file.path(pkg_dir, "data-raw"),
-##   tolerance = 1,
-##   smoothness = 2
-## )
-## aal1 <- aal1 |>
-##   atlas_region_contextual("unknown", "label") |>
-##   atlas_view_gather()
-## save(aal1, file = file.path(pkg_dir, "data", "aal1.rda"), compress = "xz")
