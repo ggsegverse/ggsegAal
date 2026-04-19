@@ -93,4 +93,5 @@ aal3_subcortical()
 #> 41 right thal pui Thal_PuI_right
 #> 42 left  n acc    N_Acc_left    
 #> 43 right n acc    N_Acc_right   
+if (FALSE) plot(aal3_subcortical()) # \dontrun{}
 ```

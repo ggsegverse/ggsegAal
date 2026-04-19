@@ -76,4 +76,5 @@ aal3_cerebellum()
 #> 24 middle vermis 8         Vermis_8              
 #> 25 middle vermis 9         Vermis_9              
 #> 26 middle vermis 6         Vermis_6              
+if (FALSE) plot(aal3_cerebellum()) # \dontrun{}
 ```

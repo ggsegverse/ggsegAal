@@ -31,6 +31,10 @@ Other ggseg_atlases:
 [`aal3_cortical()`](https://ggsegverse.github.io/ggsegAal/reference/aal3_cortical.md),
 [`aal3_subcortical()`](https://ggsegverse.github.io/ggsegAal/reference/aal3_subcortical.md)
 
+Other cortical_atlases:
+[`aal2()`](https://ggsegverse.github.io/ggsegAal/reference/aal2.md),
+[`aal3_cortical()`](https://ggsegverse.github.io/ggsegAal/reference/aal3_cortical.md)
+
 ## Examples
 
 ``` r
@@ -130,4 +134,5 @@ aal()
 #> 80 right RH_region_39 rh_RH_region_39
 #> 81 right RH_region_40 rh_RH_region_40
 #> 82 right RH_region_41 rh_RH_region_41
+if (FALSE) plot(aal()) # \dontrun{}
 ```

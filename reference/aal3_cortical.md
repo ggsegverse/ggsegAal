@@ -30,6 +30,10 @@ Other ggseg_atlases:
 [`aal3_cerebellum()`](https://ggsegverse.github.io/ggsegAal/reference/aal3_cerebellum.md),
 [`aal3_subcortical()`](https://ggsegverse.github.io/ggsegAal/reference/aal3_subcortical.md)
 
+Other cortical_atlases:
+[`aal()`](https://ggsegverse.github.io/ggsegAal/reference/aal.md),
+[`aal2()`](https://ggsegverse.github.io/ggsegAal/reference/aal2.md)
+
 ## Examples
 
 ``` r
@@ -139,4 +143,5 @@ aal3_cortical()
 #> 90 right Heschl             rh_Heschl            
 #> 91 right Temporal_Sup       rh_Temporal_Sup      
 #> 92 right Temporal_Mid       rh_Temporal_Mid      
+if (FALSE) plot(aal3_cortical()) # \dontrun{}
 ```

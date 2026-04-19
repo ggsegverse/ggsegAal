@@ -38,6 +38,10 @@ Other ggseg_atlases:
 [`aal3_cortical()`](https://ggsegverse.github.io/ggsegAal/reference/aal3_cortical.md),
 [`aal3_subcortical()`](https://ggsegverse.github.io/ggsegAal/reference/aal3_subcortical.md)
 
+Other cortical_atlases:
+[`aal()`](https://ggsegverse.github.io/ggsegAal/reference/aal.md),
+[`aal3_cortical()`](https://ggsegverse.github.io/ggsegAal/reference/aal3_cortical.md)
+
 ## Examples
 
 ``` r
@@ -137,4 +141,5 @@ aal2()
 #> 80 right Temporal_Mid       rh_Temporal_Mid      
 #> 81 right Temporal_Pole_Mid  rh_Temporal_Pole_Mid 
 #> 82 right Temporal_Inf       rh_Temporal_Inf      
+if (FALSE) plot(aal2()) # \dontrun{}
 ```
