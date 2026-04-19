@@ -67,7 +67,10 @@ describe("aal3_cortical atlas", {
   })
 
   it("palette covers all labels", {
-    expect_true(all(aal3_cortical()$core$label %in% names(aal3_cortical()$palette)))
+    expect_true(
+      all(aal3_cortical()$core$label %in%
+        names(aal3_cortical()$palette))
+    )
   })
 
   it("renders with ggseg", {

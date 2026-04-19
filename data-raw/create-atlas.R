@@ -54,7 +54,7 @@ aal <- make_ggseg3d_2_ggseg(aal_3d,
 
 plot(aal)
 
-aal %>%
+aal |>
   ggseg(atlas = ., show.legend = TRUE,
         colour = "black",
         mapping = aes(fill=region)) +
