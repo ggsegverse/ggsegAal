@@ -16,6 +16,7 @@ geometry for \code{\link[ggseg:ggbrain]{ggseg::geom_brain()}} and 3D meshes for 
 }
 \examples{
 aal3_subcortical()
+\dontrun{plot(aal3_subcortical())}
 }
 \references{
 Rolls, E. T., Huang, C. C., Lin, C. P., Feng, J., & Joliot, M.
@@ -30,3 +31,4 @@ Other ggseg_atlases:
 \code{\link{aal3_cortical}()}
 }
 \concept{ggseg_atlases}
+\concept{subcortical_atlases}

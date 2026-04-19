@@ -1,5 +1,4 @@
 library(ggsegExtra)
-# devtools::load_all("../ggsegExtra/")
 library(dplyr) # for cleaning the atlas data efficiently
 library(tidyr) # for cleaning the atlas data efficiently
 

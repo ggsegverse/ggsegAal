@@ -15,6 +15,7 @@ hemisphere. Contains 2D polygon geometry for \code{\link[ggseg:ggbrain]{ggseg::g
 }
 \examples{
 aal3_cortical()
+\dontrun{plot(aal3_cortical())}
 }
 \references{
 Rolls, E. T., Huang, C. C., Lin, C. P., Feng, J., & Joliot, M.
@@ -27,5 +28,10 @@ Other ggseg_atlases:
 \code{\link{aal2}()},
 \code{\link{aal3_cerebellum}()},
 \code{\link{aal3_subcortical}()}
+
+Other cortical_atlases: 
+\code{\link{aal}()},
+\code{\link{aal2}()}
 }
+\concept{cortical_atlases}
 \concept{ggseg_atlases}

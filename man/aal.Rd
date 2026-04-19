@@ -15,6 +15,7 @@ Brain atlas for the original Automated Anatomical Labeling parcellation
 }
 \examples{
 aal()
+\dontrun{plot(aal())}
 }
 \references{
 Tzourio-Mazoyer N, Landeau B, Papathanassiou D, et al. (2002).
@@ -29,5 +30,10 @@ Other ggseg_atlases:
 \code{\link{aal3_cerebellum}()},
 \code{\link{aal3_cortical}()},
 \code{\link{aal3_subcortical}()}
+
+Other cortical_atlases: 
+\code{\link{aal2}()},
+\code{\link{aal3_cortical}()}
 }
+\concept{cortical_atlases}
 \concept{ggseg_atlases}

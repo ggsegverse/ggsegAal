@@ -16,6 +16,7 @@ geometry for \code{\link[ggseg:ggbrain]{ggseg::geom_brain()}} and 3D meshes for 
 }
 \examples{
 aal3_cerebellum()
+\dontrun{plot(aal3_cerebellum())}
 }
 \references{
 Rolls, E. T., Huang, C. C., Lin, C. P., Feng, J., & Joliot, M.
@@ -29,4 +30,5 @@ Other ggseg_atlases:
 \code{\link{aal3_cortical}()},
 \code{\link{aal3_subcortical}()}
 }
+\concept{cerebellar_atlases}
 \concept{ggseg_atlases}
