@@ -60,77 +60,36 @@ pak::pak("ggsegverse/ggsegAal")
 #| label: aal
 library(ggseg)
 library(ggsegAAL)
-library(ggplot2)
 
-ggplot() +
-  geom_brain(
-    atlas = aal(),
-    mapping = aes(fill = label),
-    position = position_brain(hemi ~ view),
-    show.legend = FALSE
-  ) +
-  scale_fill_manual(values = aal()$palette, na.value = "grey") +
-  theme_void()
+plot(aal())
 ```
 
 ## AAL2 atlas
 
 ```{r}
 #| label: aal2
-ggplot() +
-  geom_brain(
-    atlas = aal2(),
-    mapping = aes(fill = label),
-    position = position_brain(hemi ~ view),
-    show.legend = FALSE
-  ) +
-  scale_fill_manual(values = aal2()$palette, na.value = "grey") +
-  theme_void()
+plot(aal2())
 ```
 
 ## AAL3 cortical atlas
 
 ```{r}
 #| label: aal3-cortical
-ggplot() +
-  geom_brain(
-    atlas = aal3_cortical(),
-    mapping = aes(fill = label),
-    position = position_brain(hemi ~ view),
-    show.legend = FALSE
-  ) +
-  scale_fill_manual(values = aal3_cortical()$palette, na.value = "grey") +
-  theme_void()
+plot(aal3_cortical())
 ```
 
 ## AAL3 subcortical atlas
 
 ```{r}
 #| label: aal3-subcortical
-ggplot() +
-  geom_brain(
-    atlas = aal3_subcortical(),
-    mapping = aes(fill = label),
-    position = position_brain(. ~ view),
-    show.legend = FALSE
-  ) +
-  scale_fill_manual(values = aal3_subcortical()$palette, na.value = "grey") +
-  theme_void()
+plot(aal3_subcortical())
 ```
 
 ## AAL3 cerebellum atlas
 
 ```{r}
 #| label: aal3-cerebellum
-ggplot() +
-  geom_brain(
-    atlas = aal3_cerebellum(),
-    mapping = aes(fill = label),
-    position = position_brain(. ~ view),
-    show.legend = FALSE
-  ) +
-  scale_fill_manual(values = aal3_cerebellum()$palette, na.value = "grey") +
-  theme_void()
+plot(aal3_cerebellum())
 ```
 
 ## Data source

@@ -43,17 +43,8 @@ pak::pak("ggsegverse/ggsegAal")
 ``` r
 library(ggseg)
 library(ggsegAAL)
-library(ggplot2)
 
-ggplot() +
-  geom_brain(
-    atlas = aal(),
-    mapping = aes(fill = label),
-    position = position_brain(hemi ~ view),
-    show.legend = FALSE
-  ) +
-  scale_fill_manual(values = aal()$palette, na.value = "grey") +
-  theme_void()
+plot(aal())
 ```
 
 <img src="man/figures/README-aal-1.png" style="width:100.0%" />
@@ -61,15 +52,7 @@ ggplot() +
 ## AAL2 atlas
 
 ``` r
-ggplot() +
-  geom_brain(
-    atlas = aal2(),
-    mapping = aes(fill = label),
-    position = position_brain(hemi ~ view),
-    show.legend = FALSE
-  ) +
-  scale_fill_manual(values = aal2()$palette, na.value = "grey") +
-  theme_void()
+plot(aal2())
 ```
 
 <img src="man/figures/README-aal2-1.png" style="width:100.0%" />
@@ -77,15 +60,7 @@ ggplot() +
 ## AAL3 cortical atlas
 
 ``` r
-ggplot() +
-  geom_brain(
-    atlas = aal3_cortical(),
-    mapping = aes(fill = label),
-    position = position_brain(hemi ~ view),
-    show.legend = FALSE
-  ) +
-  scale_fill_manual(values = aal3_cortical()$palette, na.value = "grey") +
-  theme_void()
+plot(aal3_cortical())
 ```
 
 <img src="man/figures/README-aal3-cortical-1.png"
@@ -94,15 +69,7 @@ style="width:100.0%" />
 ## AAL3 subcortical atlas
 
 ``` r
-ggplot() +
-  geom_brain(
-    atlas = aal3_subcortical(),
-    mapping = aes(fill = label),
-    position = position_brain(. ~ view),
-    show.legend = FALSE
-  ) +
-  scale_fill_manual(values = aal3_subcortical()$palette, na.value = "grey") +
-  theme_void()
+plot(aal3_subcortical())
 ```
 
 <img src="man/figures/README-aal3-subcortical-1.png"
@@ -111,15 +78,7 @@ style="width:100.0%" />
 ## AAL3 cerebellum atlas
 
 ``` r
-ggplot() +
-  geom_brain(
-    atlas = aal3_cerebellum(),
-    mapping = aes(fill = label),
-    position = position_brain(. ~ view),
-    show.legend = FALSE
-  ) +
-  scale_fill_manual(values = aal3_cerebellum()$palette, na.value = "grey") +
-  theme_void()
+plot(aal3_cerebellum())
 ```
 
 <img src="man/figures/README-aal3-cerebellum-1.png"
