@@ -1,84 +1,66 @@
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# ggsegAal
+<!-- README.md is generated from README.qmd. Please edit that file -->
+
+# ggsegAal <img src='man/figures/logo.png' align="right" height="138.5" />
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/ggsegverse/ggsegAal/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ggsegverse/ggsegAal/actions/workflows/R-CMD-check.yaml)
-[![r-universe](https://ggsegverse.r-universe.dev/badges/ggsegAal)](https://ggsegverse.r-universe.dev/ggsegAal)
+[![R-CMD-check](https://github.com/ggseg/ggsegAal/workflows/R-CMD-check/badge.svg)](https://github.com/ggseg/ggsegAal/actions)
+[![DOI](https://zenodo.org/badge/417464916.svg)](https://zenodo.org/badge/latestdoi/417464916)
 <!-- badges: end -->
 
-AAL Atlases for the ggsegverse Ecosystem.
+This package contains the AAL (Automated Anatomical Labeling) atlas for
+the [ggseg](https://ggseg.github.io/ggseg/) and
+[ggseg3d](https://ggseg.github.io/ggseg3d/) plotting packages. The
+template files were obtained from
+[faskowit/multiAtlasTT](https://github.com/faskowit/multiAtlasTT).
+
+Rolls, E. T., Joliot, M., & Tzourio-Mazoyer, N. (2015). Implementation
+of a new parcellation of the orbitofrontal cortex in the automated
+anatomical labeling atlas. Neuroimage, 122, 1-5.
 
 ## Installation
 
-``` r
-# From r-universe
-install.packages("ggsegAAL", repos = "https://ggsegverse.r-universe.dev")
+We recommend installing the ggseg-atlases through the ggseg
+[r-universe](https://ggseg.r-universe.dev/ui#builds):
 
-# From GitHub
-# install.packages("remotes")
-remotes::install_github("ggsegverse/ggsegAal")
+``` r
+options(repos = c(
+  ggseg = "https://ggseg.r-universe.dev",
+  CRAN = "https://cloud.r-project.org"
+))
+
+install.packages("ggsegAal")
 ```
 
-## Atlases
+You can install ggsegAal from [GitHub](https://github.com/) with:
 
-### aal
+``` r
+# install.packages("remotes")
+remotes::install_github("ggseg/ggsegAal")
+```
 
-Automated Anatomical Labeling parcellation (Tzourio-Mazoyer et al.,
-2002).
+## Example
 
 ``` r
 library(ggsegAAL)
+library(ggseg)
+
 plot(aal())
 ```
 
-<img src="man/figures/README-aal-1.png" alt="" width="100%" />
-
-### aal2
-
-AAL2 parcellation (Rolls et al., 2015).
+<img src="man/figures/README-2d-plot-1.png" style="width:100.0%" />
 
 ``` r
-plot(aal2())
+library(ggseg3d)
+
+ggseg3d(atlas = aal()) |>
+  pan_camera("right lateral")
 ```
 
-<img src="man/figures/README-aal2-1.png" alt="" width="100%" />
+<img src="man/figures/README-3d-plot.png" style="width:100.0%" />
 
-### aal3_cortical
-
-AAL3 cortical parcellation (Rolls et al., 2020).
-
-``` r
-plot(aal3_cortical())
-```
-
-<img src="man/figures/README-aal3_cortical-1.png" alt="" width="100%" />
-
-### aal3_subcortical
-
-AAL3 subcortical parcellation.
-
-``` r
-plot(aal3_subcortical())
-```
-
-<img src="man/figures/README-aal3_subcortical-1.png" alt="" width="100%" />
-
-### aal3_cerebellum
-
-AAL3 cerebellar parcellation.
-
-``` r
-plot(aal3_cerebellum())
-```
-
-<img src="man/figures/README-aal3_cerebellum-1.png" alt="" width="100%" />
-\## Data source
-
-FreeSurfer fsaverage5 annotations.
-
-- **Reference**: Tzourio-Mazoyer et al. (2002)
-  [doi:10.1006/nimg.2001.0978](https://doi.org/10.1006/nimg.2001.0978)
-- **Date obtained**: 2021-10-15
+Please note that the ‘ggsegAal’ project is released with a [Contributor
+Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this project,
+you agree to abide by its terms.

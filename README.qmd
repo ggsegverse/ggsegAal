@@ -62,17 +62,8 @@ remotes::install_github("ggseg/ggsegAal")
 #| label: 2d-plot
 library(ggsegAAL)
 library(ggseg)
-library(ggplot2)
 
-ggplot() +
-  geom_brain(
-    atlas = aal(),
-    mapping = aes(fill = label),
-    position = position_brain(hemi ~ view),
-    show.legend = FALSE
-  ) +
-  scale_fill_manual(values = aal()$palette, na.value = "grey") +
-  theme_void()
+plot(aal())
 ```
 
 ```{r}
