@@ -59,6 +59,7 @@ pak::pak("ggsegverse/ggsegAal")
 ```{r}
 #| label: aal
 library(ggseg)
+library(ggsegAAL)
 
 plot(aal())
 ```
