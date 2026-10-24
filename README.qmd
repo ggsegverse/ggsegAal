@@ -24,6 +24,17 @@ knitr::opts_chunk$set(
 [![r-universe](https://ggseg.r-universe.dev/badges/ggsegAAL)](https://ggseg.r-universe.dev/ggsegAAL)
 <!-- badges: end -->
 
+> [!IMPORTANT]
+> **This package is deprecated and archived.** It has been superseded by
+> [`lemaitreh/ggsegAal`](https://github.com/lemaitreh/ggsegAal), maintained by
+> Hervé Lemaître, which covers the same AAL versions more completely: AAL1, AAL2
+> and AAL3 each as cortical, basal-ganglia and cerebellar atlases, with the
+> cerebellum drawn as a SUIT flatmap rather than volumetric slabs.
+>
+> Please install from there instead. This repository remains available read-only
+> so existing links keep resolving.
+
+
 This package contains the AAL (Automated Anatomical Labeling) atlas for
 the [ggseg](https://ggseg.github.io/ggseg/) plotting packages.
 
